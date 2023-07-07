@@ -37,13 +37,13 @@ defaults
 frontend richards-lot.tech-http-frontend
 	bind	 *:80
 	http-request set-header X-Forwarded-Proto http
-	default_backend	 richards-lot.tech-backend
+	default_backend	 kingsleys-lot.tech-backend
 
 
 frontend  richards-lot.tech-https-frontend
 	bind *:443 ssl crt /etc/ssl/richards-lot.tech.pem
 	http-request set-header X-Forwarded-Proto https
-        default_backend richards-lot.tech-backend
+        default_backend kingsleys-lot.tech-backend
 
 
 backend aysuarex.tech-backend
